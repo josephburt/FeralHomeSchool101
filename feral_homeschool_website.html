@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeralHomeSchool101 - Wild Learning Adventures in Ellis County, Texas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #2c5530;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+        }
+
+        .subtitle {
+            color: #ff6b35;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transform: rotate(1deg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:nth-child(even) {
+            transform: rotate(-1deg);
+        }
+
+        .card:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        .clip-art {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 4em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .clip-art::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.1) 10px,
+                rgba(255, 255, 255, 0.1) 20px
+            );
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .happy-kids {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+        }
+
+        .teachers {
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+        }
+
+        .wild-kids {
+            background: linear-gradient(45deg, #00b894, #00cec9);
+        }
+
+        .playing-kids {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+        }
+
+        h2 {
+            color: #2c5530;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff6b35;
+            display: block;
+        }
+
+        .stat-label {
+            color: #2c5530;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background: rgba(44, 85, 48, 0.9);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .bouncing {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(1deg); }
+            50% { transform: translateY(-20px) rotate(-1deg); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .hero-section { grid-template-columns: 1fr; }
+            .stats { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="bouncing">🌟 FeralHomeSchool101 🌟</h1>
+            <p class="subtitle">Where Wild Hearts Learn & Grow!</p>
+            <p>Located in Beautiful Ellis County, Texas</p>
+        </header>
+
+        <div class="hero-section">
+            <div class="card floating">
+                <div class="clip-art happy-kids">
+                    😊👧🧒😄
+                </div>
+                <h2>Happy Learning</h2>
+                <p>Our kids love learning in their own unique way! Every day brings new adventures and discoveries.</p>
+            </div>
+
+            <div class="card floating" style="animation-delay: 0.5s;">
+                <div class="clip-art teachers">
+                    👩‍🏫❤️👩‍🏫
+                </div>
+                <h2>Two Amazing Moms</h2>
+                <p>Run by two dedicated moms who believe in nurturing each child's natural curiosity and wild spirit!</p>
+            </div>
+
+            <div class="card floating" style="animation-delay: 1s;">
+                <div class="clip-art wild-kids">
+                    🏃‍♀️💨🌪️🏃‍♂️
+                </div>
+                <h2>Wild & Free</h2>
+                <p>We embrace the natural energy of childhood - learning doesn't have to be quiet and still!</p>
+            </div>
+
+            <div class="card floating" style="animation-delay: 1.5s;">
+                <div class="clip-art playing-kids">
+                    🎮🏀⚽🎨
+                </div>
+                <h2>Learning Through Play</h2>
+                <p>Play IS learning! We incorporate games, sports, arts, and hands-on activities into everything we do.</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🏡 About Our Feral Family</h2>
+            <p>Welcome to FeralHomeSchool101, where education meets adventure! We're a small, tight-knit learning community right here in Ellis County, Texas. Our approach is simple: let kids be kids while they learn and grow.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Teaching Moms</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Amazing Kids</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Fun Adventures</span>
+                </div>
+            </div>
+
+            <p><strong>Our Philosophy:</strong> Kids learn best when they're engaged, excited, and allowed to explore their interests naturally. We combine structured learning with plenty of freedom to be creative, curious, and yes... a little wild!</p>
+        </div>
+
+        <div class="info-section">
+            <h2>🌾 Ellis County Learning</h2>
+            <p>We take advantage of everything our beautiful Texas county has to offer - from nature walks and outdoor science experiments to community field trips and local history exploration. Learning extends far beyond textbooks!</p>
+            
+            <p><strong>What Makes Us Special:</strong></p>
+            <p>• Small class size means personalized attention for each child</p>
+            <p>• Mom-taught with love, patience, and understanding</p>
+            <p>• Flexible curriculum that adapts to each child's learning style</p>
+            <p>• Emphasis on both academic excellence AND character development</p>
+            <p>• Lots of outdoor time and physical activity</p>
+        </div>
+
+        <footer>
+            <h2>🌟 Ready to Join the Adventure? 🌟</h2>
+            <p>Contact us to learn more about our wild and wonderful approach to homeschooling!</p>
+            <p><strong>FeralHomeSchool101.com</strong></p>
+            <p>Ellis County, Texas • Where Learning Runs Wild!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add some interactive elements
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'rotate(0deg) scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (this.classList.contains('floating')) {
+                    this.style.transform = '';
+                }
+            });
+        });
+
+        // Add some random rotation to cards on load
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                const randomRotation = (Math.random() - 0.5) * 6; // -3 to 3 degrees
+                card.style.setProperty('--random-rotation', randomRotation + 'deg');
+            });
+        });
+    </script>
+</body>
+</html>
